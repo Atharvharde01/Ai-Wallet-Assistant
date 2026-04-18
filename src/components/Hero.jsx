@@ -15,7 +15,7 @@ const avatars = [
   },
 ]
 
-export default function Hero() {
+export default function Hero({ onOpenDashboard }) {
   return (
     <section className="max-w-7xl mx-auto px-8 grid lg:grid-cols-[1.2fr_1fr] gap-16 items-center mb-32">
       <div>
@@ -34,10 +34,10 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-wrap gap-4">
-          <button className="btn-primary px-8 py-4 rounded-xl text-lg">
+          <button className="btn-primary px-8 py-4 rounded-xl text-lg" onClick={onOpenDashboard}>
             Connect Wallet
           </button>
-          <button className="px-8 py-4 bg-surface-container-low border border-outline-variant/20 text-on-surface rounded-xl font-bold text-lg hover:bg-surface-container-high transition-all duration-200 card-hover">
+          <button className="px-8 py-4 bg-surface-container-low border border-outline-variant/20 text-on-surface rounded-xl font-bold text-lg hover:bg-surface-container-high transition-all duration-200 card-hover" onClick={onOpenDashboard}>
             Try Demo
           </button>
         </div>
